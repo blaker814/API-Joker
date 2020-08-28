@@ -17,6 +17,7 @@ jokeBtn.addEventListener("click", (e) => {
     .then(HTML => {
       jokeSet.innerHTML += HTML
       jokeBtn.disabled = true
+      document.querySelector("#joke-choice").disabled = true
     })
     .then(() => useJoke())
     .then(joke => JokePunchline(joke))
@@ -26,5 +27,6 @@ jokeBtn.addEventListener("click", (e) => {
       jokePunch.innerHTML += HTML
       punchlineAdd.disabled = true;
       jokeBtn.disabled = false;
+      document.querySelector("#joke-choice").disabled = false
     })})
 });
