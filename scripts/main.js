@@ -16,6 +16,7 @@ jokeBtn.addEventListener("click", (e) => {
     .then(() => {
       let joke = useJoke()
       if (joke.type === "knock-knock") { 
+        jokeBtn.disabled = true;
         jokeSet.innerHTML += `
         <p>Knock knock.</p>
         <button id="whos-there">Who's there?</button>`
